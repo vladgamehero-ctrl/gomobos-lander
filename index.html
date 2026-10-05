@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Learn More About Business Wireless</title>
+<style>
+:root{
+  --bg:#ffffff; --text:#1f2a44; --muted:#4a5568; --brand:#4a7fe0; --dot:#4a9be0;
+  --btn:#2352f0; --btn-border:#1a1a1a; --cta:#0000ee; --line:#e3e9f6; --result-title:#7a7a7a;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#ffffff; }
+}
+:root[data-theme="dark"]{ --bg:#ffffff; }
+html{scroll-padding-top:env(safe-area-inset-top,0px);}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:720px;margin:0 auto;padding:0 14px}
+header{border-bottom:1px solid var(--line);padding:22px 0 18px;text-align:center}
+.logo{font-size:36px;font-weight:800;color:var(--brand);letter-spacing:-.5px;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.logo span{width:11px;height:11px;border-radius:50%;background:var(--dot);display:inline-block}
+.search{margin:16px auto 0;max-width:380px;display:flex;align-items:center;gap:14px;border:2px solid var(--line);border-radius:999px;padding:10px 20px;font-size:20px;color:#111}
+.search svg{flex:none}
+h1{font-size:26px;line-height:1.2;margin:14px 0 18px;font-weight:800;color:#24335a}
+.lead{font-size:16px;line-height:1.75;color:var(--muted);margin:0 0 30px}
+h2{font-size:30px;font-weight:400;margin:0 0 10px;color:#111}
+.opts{display:flex;flex-direction:column;gap:10px;margin-bottom:46px}
+.opt{display:flex;align-items:center;gap:18px;background:var(--btn);color:#fff;border:3px solid var(--btn-border);border-radius:12px;padding:20px 22px;font-size:26px;font-weight:700;text-decoration:none;line-height:1.2}
+.opt .t{flex:1}
+.opt:focus-visible,.cta:focus-visible{outline:3px solid #f5b700;outline-offset:3px}
+.hero{border-radius:14px;overflow:hidden;margin-bottom:28px;background:#dfe6ee}
+.hero svg{display:block;width:100%;height:auto}
+article h3{font-size:21px;margin:26px 0 8px;color:#24335a}
+article p{font-size:16px;line-height:1.75;color:var(--muted);margin:0 0 14px}
+.ad{padding:26px 22px 24px;border:1px solid var(--line);border-top:none}
+.sp{font-weight:700;font-size:17px;margin-bottom:12px}
+.src{display:flex;align-items:center;gap:14px}
+.fav{width:38px;height:38px;border-radius:50%;background:#eef3ff;border:1px solid #d7def0;display:grid;place-items:center;font-weight:800;color:#2352f0;font-size:16px;flex:none}
+.dom{font-size:18px;line-height:1.3;color:#222}
+.url{font-size:16px;color:#333;word-break:break-all}
+.ad h4{font-size:27px;font-weight:400;line-height:1.25;margin:16px 0 10px;color:#111}
+.ad p{font-size:17px;line-height:1.7;margin:0 0 18px;color:#222}
+.cta{display:flex;justify-content:center;align-items:center;gap:12px;background:var(--cta);color:#fff;border:3px solid #1a1a1a;border-radius:999px;padding:18px;font-size:24px;text-decoration:none}
+.results{padding:20px 10px 60px;color:#333}
+.results small{display:block;font-size:15px;margin-bottom:6px}
+.cookie{position:sticky;bottom:0;background:#fff;border-top:1px solid var(--line);font-size:12.5px;text-align:center;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));color:#222}
+.cookie button{background:none;border:none;text-decoration:underline;font:inherit;cursor:pointer;padding:0}
+.loader{position:fixed;inset:0;z-index:50;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:env(safe-area-inset-top,0px) 20px env(safe-area-inset-bottom,0px)}
+.pct{font-size:clamp(96px,30vw,180px);font-weight:900;color:#e10600;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-3px}
+.ltxt{font-size:18px;color:#9a9a9a}
+.lfall{font-size:16px;color:#7aa2ff}
+[hidden]{display:none!important}
+@media (max-width:420px){ .opt{font-size:23px} .ad h4{font-size:24px} h1{font-size:23px} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#">Gomobos<span></span></a>
+    <div class="search" id="searchBar" hidden>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8a94a6" stroke-width="2.4"><circle cx="10.5" cy="10.5" r="7"/><path d="M16 16l5 5"/></svg>
+      <span id="q"></span>
+    </div>
+  </div>
+</header>
+
+<!-- Screen 1: article -->
+<main id="article" class="wrap">
+  <h1>Learn More About Business Wireless: A Practical Guide to Connectivity for Companies in 2026</h1>
+  <p class="lead">Business wireless covers the mobile plans, devices and network services companies use to keep teams connected. Understanding how these services are structured can help organizations compare options and choose what fits their size and needs…</p>
+
+  <h2>Discover related topics</h2>
+  <nav class="opts">
+    <a class="opt" href="#s=First%20Option"><svg width="18" height="28" viewBox="0 0 18 28"><path d="M3 3l11 11L3 25" fill="none" stroke="#fff" stroke-width="3.5"/></svg><span class="t">First Option</span><svg width="18" height="28" viewBox="0 0 18 28"><path d="M3 3l11 11L3 25" fill="none" stroke="#fff" stroke-width="3.5"/></svg></a>
+    <a class="opt" href="#s=Second%20Option"><svg width="18" height="28" viewBox="0 0 18 28"><path d="M3 3l11 11L3 25" fill="none" stroke="#fff" stroke-width="3.5"/></svg><span class="t">Second Option</span><svg width="18" height="28" viewBox="0 0 18 28"><path d="M3 3l11 11L3 25" fill="none" stroke="#fff" stroke-width="3.5"/></svg></a>
+    <a class="opt" href="#s=Third%20Option"><svg width="18" height="28" viewBox="0 0 18 28"><path d="M3 3l11 11L3 25" fill="none" stroke="#fff" stroke-width="3.5"/></svg><span class="t">Third Option</span><svg width="18" height="28" viewBox="0 0 18 28"><path d="M3 3l11 11L3 25" fill="none" stroke="#fff" stroke-width="3.5"/></svg></a>
+  </nav>
+
+  <div class="hero" aria-hidden="true">
+    <svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9eef4"/><stop offset="1" stop-color="#d6dee8"/></linearGradient>
+        <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9a77f"/><stop offset="1" stop-color="#b08b62"/></linearGradient>
+      </defs>
+      <rect width="800" height="460" fill="url(#wall)"/>
+      <rect y="330" width="800" height="130" fill="url(#desk)"/>
+      <!-- window light -->
+      <rect x="560" y="30" width="200" height="230" rx="6" fill="#f5f8fc" opacity=".7"/>
+      <path d="M660 30v230M560 145h200" stroke="#d6dee8" stroke-width="6"/>
+      <!-- router -->
+      <rect x="90" y="282" width="190" height="52" rx="12" fill="#2b3446"/>
+      <rect x="110" y="300" width="10" height="10" rx="5" fill="#4ade80"/>
+      <rect x="130" y="300" width="10" height="10" rx="5" fill="#4ade80"/>
+      <rect x="150" y="300" width="10" height="10" rx="5" fill="#60a5fa"/>
+      <path d="M115 282l-12-90M255 282l12-90" stroke="#2b3446" stroke-width="9" stroke-linecap="round"/>
+      <g fill="none" stroke="#2352f0" stroke-width="7" stroke-linecap="round">
+        <path d="M150 220a40 40 0 0 1 70 0" opacity=".9"/>
+        <path d="M128 196a70 70 0 0 1 114 0" opacity=".6"/>
+        <path d="M106 172a100 100 0 0 1 158 0" opacity=".35"/>
+      </g>
+      <!-- phone -->
+      <rect x="350" y="190" width="96" height="176" rx="16" fill="#1d2433" transform="rotate(-8 398 278)"/>
+      <rect x="360" y="206" width="76" height="140" rx="8" fill="#eaf0ff" transform="rotate(-8 398 278)"/>
+      <g transform="rotate(-8 398 278)">
+        <rect x="370" y="222" width="56" height="10" rx="5" fill="#2352f0"/>
+        <rect x="370" y="242" width="40" height="8" rx="4" fill="#a8b8e8"/>
+        <rect x="370" y="258" width="48" height="8" rx="4" fill="#a8b8e8"/>
+        <rect x="370" y="300" width="56" height="26" rx="8" fill="#2352f0"/>
+      </g>
+      <!-- laptop -->
+      <rect x="500" y="200" width="230" height="146" rx="10" fill="#2b3446"/>
+      <rect x="512" y="212" width="206" height="122" rx="4" fill="#f4f7fb"/>
+      <rect x="530" y="230" width="110" height="12" rx="6" fill="#24335a"/>
+      <rect x="530" y="252" width="160" height="8" rx="4" fill="#b7c3d6"/>
+      <rect x="530" y="268" width="140" height="8" rx="4" fill="#b7c3d6"/>
+      <rect x="530" y="292" width="70" height="24" rx="12" fill="#2352f0"/>
+      <path d="M480 346h270l-18 16H498z" fill="#3a4458"/>
+      <!-- plant -->
+      <rect x="40" y="290" width="38" height="46" rx="6" fill="#f2f2ee"/>
+      <path d="M59 292c-10-30-30-40-34-62 20 6 30 26 34 50 2-28 12-50 30-58-2 26-18 44-30 70" fill="#6a9a5b"/>
+    </svg>
+  </div>
+
+  <article>
+    <h3>What business wireless means</h3>
+    <p>Business wireless refers to mobile voice, messaging and data services designed for organizations rather than individual consumers. These services typically combine phone lines, data allowances and device management under a single account, which makes billing and administration easier as a team grows.</p>
+    <h3>Common types of plans</h3>
+    <p>Providers usually offer per-line plans, where each employee receives an individual allowance, and pooled or shared plans, where data is distributed across all lines on the account. Some companies also add fixed wireless internet for offices or mobile hotspots for staff who work in the field.</p>
+    <h3>Factors to compare</h3>
+    <p>When reviewing options, organizations often look at network coverage in the areas where employees work, the number of lines needed, data usage patterns, contract length, device financing terms and the level of customer support available. International roaming and security features can matter for teams that travel or handle sensitive information.</p>
+    <h3>Managing devices and lines</h3>
+    <p>Many business accounts include an online portal for adding or removing lines, setting usage limits and tracking spending. Mobile device management tools can help IT teams configure phones remotely, apply security policies and wipe lost devices.</p>
+    <h3>Planning for growth</h3>
+    <p>A plan that works for a small team may need adjusting later. Reviewing usage every few months and checking whether pooled data, additional lines or different device options would be more efficient can help keep connectivity aligned with business needs.</p>
+    <p>Each company's situation is different, so it can be useful to compare several providers and read plan terms carefully before making a decision.</p>
+  </article>
+</main>
+
+<!-- Screen 2: search / sponsored -->
+<main id="serp" class="wrap" hidden>
+  <section class="ad">
+    <div class="sp">Sponsored</div>
+    <div class="src">
+      <div class="fav">G</div>
+      <div>
+        <div class="dom">gomobos.com</div>
+        <div class="url">https://gomobos.com</div>
+      </div>
+    </div>
+    <h4>Business Wireless Solutions - Plans for Teams of Any Size</h4>
+    <p>Explore business wireless options for your company. Compare plans, devices and connectivity services in one place. Learn more today.</p>
+    <a class="cta" id="cta" href="https://gomobos.com" target="_top">Visit Website
+      <svg width="26" height="22" viewBox="0 0 26 22" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 11h21M14 2l9 9-9 9"/></svg>
+    </a>
+  </section>
+  <div class="results">
+    <small>Search result</small>
+    <small id="cnt"></small>
+  </div>
+</main>
+
+<div class="cookie" id="cookie">
+  We use functional cookies and non-personalized content. Click "OK" to allow us and our partners to use your data for the best experience. <u>Learn more</u> – <button id="ok">OK</button>
+</div>
+
+<div class="loader" id="loader" hidden>
+  <div class="pct" id="pct">1%</div>
+  <div class="ltxt">Loading…</div>
+  <a class="lfall" id="lfall" href="https://gomobos.com" target="_top" hidden>Continue to gomobos.com</a>
+</div>
+
+<script>
+(function(){
+  var DEST='https://gomobos.com', DURATION=2000; // ms от 1% до 99%
+  var cta=document.getElementById('cta'), loader=document.getElementById('loader'),
+      pct=document.getElementById('pct'), fall=document.getElementById('lfall');
+  function go(){
+    try{ window.top.location.href=DEST; }catch(e){ window.location.href=DEST; }
+    setTimeout(function(){ fall.hidden=false; },1500);
+  }
+  cta.addEventListener('click',function(e){
+    e.preventDefault();
+    loader.hidden=false; fall.hidden=true; pct.textContent='1%';
+    var t0=performance.now();
+    (function tick(now){
+      var p=Math.min(1,(now-t0)/DURATION);
+      var eased=1-Math.pow(1-p,2);
+      pct.textContent=Math.max(1,Math.round(1+eased*98))+'%';
+      if(p<1) requestAnimationFrame(tick); else go();
+    })(t0);
+  });
+  window.addEventListener('pageshow',function(e){ if(e.persisted) loader.hidden=true; });
+})();
+(function(){
+  var art=document.getElementById('article'), serp=document.getElementById('serp'),
+      bar=document.getElementById('searchBar'), q=document.getElementById('q'), cnt=document.getElementById('cnt');
+  function route(){
+    var m=location.hash.match(/^#s=(.+)$/);
+    if(m){
+      var term=decodeURIComponent(m[1]);
+      q.textContent=term; cnt.textContent='Results for \u201C'+term+'\u201D query';
+      art.hidden=true; serp.hidden=false; bar.hidden=false;
+    } else { art.hidden=false; serp.hidden=true; bar.hidden=true; }
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',route); route();
+  var c=document.getElementById('cookie');
+  try{ if(localStorage.getItem('ck')==='1') c.hidden=true; }catch(e){}
+  document.getElementById('ok').onclick=function(){ c.hidden=true; try{localStorage.setItem('ck','1')}catch(e){} };
+})();
+</script>
+</body>
+</html>
