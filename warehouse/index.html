@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Warehouse Jobs Near Me</title>
+<style>
+:root{
+  --bg:#ffffff; --text:#1f2a44; --muted:#4a5568; --brand:#4a7fe0; --dot:#4a9be0;
+  --btn:#2352f0; --btn-border:#1a1a1a; --cta:#0000ee; --line:#e3e9f6; --result-title:#7a7a7a;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#ffffff; }
+}
+:root[data-theme="dark"]{ --bg:#ffffff; }
+html{scroll-padding-top:env(safe-area-inset-top,0px);}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:720px;margin:0 auto;padding:0 14px}
+header{border-bottom:1px solid var(--line);padding:22px 0 18px;text-align:center}
+.logo{font-size:36px;font-weight:800;color:var(--brand);letter-spacing:-.5px;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.logo span{width:11px;height:11px;border-radius:50%;background:var(--dot);display:inline-block}
+.search{margin:16px auto 0;max-width:380px;display:flex;align-items:center;gap:14px;border:2px solid var(--line);border-radius:999px;padding:10px 20px;font-size:20px;color:#111}
+.search svg{flex:none}
+h1{font-size:26px;line-height:1.2;margin:14px 0 18px;font-weight:800;color:#24335a}
+.lead{font-size:16px;line-height:1.75;color:var(--muted);margin:0 0 30px}
+h2{font-size:30px;font-weight:400;margin:0 0 10px;color:#111}
+.opts{display:flex;flex-direction:column;gap:10px;margin-bottom:46px}
+.opt{display:flex;align-items:center;gap:18px;background:var(--btn);color:#fff;border:3px solid var(--btn-border);border-radius:12px;padding:20px 22px;font-size:26px;font-weight:700;text-decoration:none;line-height:1.2}
+.opt .t{flex:1}
+.opt:focus-visible,.cta:focus-visible{outline:3px solid #f5b700;outline-offset:3px}
+.hero{border-radius:14px;overflow:hidden;margin-bottom:28px;background:#dfe6ee}
+.hero svg{display:block;width:100%;height:auto}
+article h3{font-size:21px;margin:26px 0 8px;color:#24335a}
+article p{font-size:16px;line-height:1.75;color:var(--muted);margin:0 0 14px}
+.ad{padding:26px 22px 24px;border:1px solid var(--line);border-top:none}
+.sp{font-weight:700;font-size:17px;margin-bottom:12px}
+.src{display:flex;align-items:center;gap:14px}
+.fav{width:38px;height:38px;border-radius:50%;background:#eef3ff;border:1px solid #d7def0;display:grid;place-items:center;font-weight:800;color:#2352f0;font-size:16px;flex:none}
+.dom{font-size:18px;line-height:1.3;color:#222}
+.url{font-size:16px;color:#333;word-break:break-all}
+.ad h4{font-size:27px;font-weight:400;line-height:1.25;margin:16px 0 10px;color:#111}
+.ad p{font-size:17px;line-height:1.7;margin:0 0 18px;color:#222}
+.cta{display:flex;justify-content:center;align-items:center;gap:12px;background:var(--cta);color:#fff;border:3px solid #1a1a1a;border-radius:999px;padding:18px;font-size:24px;text-decoration:none}
+.results{padding:20px 10px 60px;color:#333}
+.results small{display:block;font-size:15px;margin-bottom:6px}
+.cookie{position:sticky;bottom:0;background:#fff;border-top:1px solid var(--line);font-size:12.5px;text-align:center;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));color:#222}
+.cookie button{background:none;border:none;text-decoration:underline;font:inherit;cursor:pointer;padding:0}
+.loader{position:fixed;inset:0;z-index:50;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:env(safe-area-inset-top,0px) 20px env(safe-area-inset-bottom,0px)}
+.pct{font-size:clamp(96px,30vw,180px);font-weight:900;color:#e10600;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-3px}
+.ltxt{font-size:18px;color:#9a9a9a}
+.lfall{font-size:16px;color:#7aa2ff}
+[hidden]{display:none!important}
+@media (max-width:420px){ .opt{font-size:23px} .ad h4{font-size:24px} h1{font-size:23px} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#">Gomobos<span></span></a>
+    <div class="search" id="searchBar" hidden>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8a94a6" stroke-width="2.4"><circle cx="10.5" cy="10.5" r="7"/><path d="M16 16l5 5"/></svg>
+      <span id="q"></span>
+    </div>
+  </div>
+</header>
+
+<!-- Screen 1: article -->
+<main id="article" class="wrap">
+  <h1>Warehouse Jobs Near Me: A Practical Guide to Finding Warehouse Work in 2026</h1>
+  <p class="lead">Warehouse work includes a wide range of roles that keep goods moving from suppliers to customers. Knowing what these jobs involve and how to search for them locally can help job seekers find positions that match their schedule and skills…</p>
+
+  <h2>Discover related topics</h2>
+  <nav class="opts">
+    <a class="opt" href="#s=First%20Option"><svg width="18" height="28" viewBox="0 0 18 28"><path d="M3 3l11 11L3 25" fill="none" stroke="#fff" stroke-width="3.5"/></svg><span class="t">First Option</span><svg width="18" height="28" viewBox="0 0 18 28"><path d="M3 3l11 11L3 25" fill="none" stroke="#fff" stroke-width="3.5"/></svg></a>
+    <a class="opt" href="#s=Second%20Option"><svg width="18" height="28" viewBox="0 0 18 28"><path d="M3 3l11 11L3 25" fill="none" stroke="#fff" stroke-width="3.5"/></svg><span class="t">Second Option</span><svg width="18" height="28" viewBox="0 0 18 28"><path d="M3 3l11 11L3 25" fill="none" stroke="#fff" stroke-width="3.5"/></svg></a>
+    <a class="opt" href="#s=Third%20Option"><svg width="18" height="28" viewBox="0 0 18 28"><path d="M3 3l11 11L3 25" fill="none" stroke="#fff" stroke-width="3.5"/></svg><span class="t">Third Option</span><svg width="18" height="28" viewBox="0 0 18 28"><path d="M3 3l11 11L3 25" fill="none" stroke="#fff" stroke-width="3.5"/></svg></a>
+  </nav>
+
+  <div class="hero" aria-hidden="true">
+    <svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="460" fill="#e6ebf1"/>
+      <rect y="380" width="800" height="80" fill="#c8cfd8"/>
+      <path d="M0 400h800" stroke="#f2c230" stroke-width="6" stroke-dasharray="40 24"/>
+      <g fill="#3a5a8c">
+        <rect x="40" y="60" width="12" height="320"/><rect x="300" y="60" width="12" height="320"/>
+        <rect x="40" y="150" width="272" height="10"/><rect x="40" y="250" width="272" height="10"/><rect x="40" y="350" width="272" height="10"/>
+      </g>
+      <g fill="#c99a5b" stroke="#a8793d" stroke-width="3">
+        <rect x="62" y="96" width="70" height="54"/><rect x="142" y="106" width="60" height="44"/><rect x="212" y="90" width="78" height="60"/>
+        <rect x="62" y="196" width="88" height="54"/><rect x="160" y="200" width="60" height="50"/><rect x="230" y="206" width="60" height="44"/>
+        <rect x="62" y="296" width="64" height="54"/><rect x="136" y="290" width="80" height="60"/><rect x="226" y="304" width="64" height="46"/>
+      </g>
+      <g>
+        <rect x="430" y="270" width="150" height="90" rx="10" fill="#f2b51d"/>
+        <rect x="470" y="200" width="90" height="75" rx="6" fill="none" stroke="#2b3446" stroke-width="8"/>
+        <rect x="580" y="170" width="12" height="200" fill="#2b3446"/>
+        <rect x="592" y="330" width="80" height="10" fill="#2b3446"/>
+        <rect x="600" y="270" width="70" height="58" fill="#c99a5b" stroke="#a8793d" stroke-width="3"/>
+        <circle cx="465" cy="368" r="22" fill="#2b3446"/><circle cx="465" cy="368" r="8" fill="#8a94a6"/>
+        <circle cx="550" cy="368" r="22" fill="#2b3446"/><circle cx="550" cy="368" r="8" fill="#8a94a6"/>
+      </g>
+      <g fill="#c99a5b" stroke="#a8793d" stroke-width="3">
+        <rect x="690" y="300" width="80" height="80"/><rect x="700" y="230" width="64" height="70"/>
+      </g>
+    </svg>
+  </div>
+
+  <article>
+    <h3>What warehouse jobs involve</h3>
+    <p>Warehouses store and distribute products for retailers, manufacturers and online stores. Typical roles include picking and packing orders, loading and unloading trucks, sorting packages, checking inventory and operating equipment such as pallet jacks or forklifts. Many positions are entry-level and provide on-the-job training.</p>
+    <h3>Common shifts and schedules</h3>
+    <p>Because many distribution centers run around the clock, warehouse jobs are often offered as day, evening, overnight or weekend shifts. Full-time, part-time and seasonal positions are common, and demand frequently increases ahead of busy shopping periods.</p>
+    <h3>Typical requirements</h3>
+    <p>Employers usually look for reliability, attention to detail and the ability to stand, walk and lift items for extended periods. Some roles require a high school diploma or equivalent, and equipment operators may need certification, which some employers help provide.</p>
+    <h3>How to search locally</h3>
+    <p>Job seekers often start with online job boards, company career pages and local staffing agencies. Filtering by distance, shift and job type can narrow results, and setting up alerts helps track new openings as they are posted.</p>
+    <h3>Pay and benefits to compare</h3>
+    <p>Hourly pay for warehouse roles varies by location, employer, shift and experience. When comparing offers, it can help to look at shift differentials, overtime rules, scheduling flexibility, benefits and opportunities to move into lead or supervisor positions.</p>
+    <p>Reading each job description carefully and confirming details with the employer can help you choose a position that fits your needs.</p>
+  </article>
+</main>
+
+<!-- Screen 2: search / sponsored -->
+<main id="serp" class="wrap" hidden>
+  <section class="ad">
+    <div class="sp">Sponsored</div>
+    <div class="src">
+      <div class="fav">G</div>
+      <div>
+        <div class="dom">gomobogo.com</div>
+        <div class="url">https://gomobogo.com</div>
+      </div>
+    </div>
+    <h4>Salary up to $18 per Hour - Warehouse Jobs Near You</h4>
+    <p>Browse warehouse job openings in your area. Compare positions, shifts and requirements in one place. Learn more today.</p>
+    <a class="cta" id="cta" href="https://gomobogo.com" target="_top">Visit Website
+      <svg width="26" height="22" viewBox="0 0 26 22" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 11h21M14 2l9 9-9 9"/></svg>
+    </a>
+  </section>
+  <div class="results">
+    <small>Search result</small>
+    <small id="cnt"></small>
+  </div>
+</main>
+
+<div class="cookie" id="cookie">
+  We use functional cookies and non-personalized content. Click "OK" to allow us and our partners to use your data for the best experience. <u>Learn more</u> – <button id="ok">OK</button>
+</div>
+
+<div class="loader" id="loader" hidden>
+  <div class="pct" id="pct">1%</div>
+  <div class="ltxt">Loading…</div>
+  <a class="lfall" id="lfall" href="https://gomobogo.com" target="_top" hidden>Continue to gomobogo.com</a>
+</div>
+
+<script>
+(function(){
+  var DEST='https://gomobogo.com', DURATION=2000; // ms от 1% до 99%
+  var cta=document.getElementById('cta'), loader=document.getElementById('loader'),
+      pct=document.getElementById('pct'), fall=document.getElementById('lfall');
+  function go(){
+    try{ window.top.location.href=DEST; }catch(e){ window.location.href=DEST; }
+    setTimeout(function(){ fall.hidden=false; },1500);
+  }
+  cta.addEventListener('click',function(e){
+    e.preventDefault();
+    loader.hidden=false; fall.hidden=true; pct.textContent='1%';
+    var t0=performance.now();
+    (function tick(now){
+      var p=Math.min(1,(now-t0)/DURATION);
+      var eased=1-Math.pow(1-p,2);
+      pct.textContent=Math.max(1,Math.round(1+eased*98))+'%';
+      if(p<1) requestAnimationFrame(tick); else go();
+    })(t0);
+  });
+  window.addEventListener('pageshow',function(e){ if(e.persisted) loader.hidden=true; });
+})();
+(function(){
+  var art=document.getElementById('article'), serp=document.getElementById('serp'),
+      bar=document.getElementById('searchBar'), q=document.getElementById('q'), cnt=document.getElementById('cnt');
+  function route(){
+    var m=location.hash.match(/^#s=(.+)$/);
+    if(m){
+      var term=decodeURIComponent(m[1]);
+      q.textContent=term; cnt.textContent='Results for \u201C'+term+'\u201D query';
+      art.hidden=true; serp.hidden=false; bar.hidden=false;
+    } else { art.hidden=false; serp.hidden=true; bar.hidden=true; }
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',route); route();
+  var c=document.getElementById('cookie');
+  try{ if(localStorage.getItem('ck')==='1') c.hidden=true; }catch(e){}
+  document.getElementById('ok').onclick=function(){ c.hidden=true; try{localStorage.setItem('ck','1')}catch(e){} };
+})();
+</script>
+</body>
+</html>
